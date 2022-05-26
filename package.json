@@ -8,7 +8,8 @@
     "client": "cd client && npm install && npm run start",
     "client-static": "cd client && npm install && npm run build",
     "dev": "npm install && concurrently \"nodemon server.js\" \"npm run client\"",
-    "start": "node node_modules/concurrently/dist/bin/concurrently \"node server.js\" \"npm run client-static\""
+    "start2": "npm install && concurrently \"node server.js\" \"npm run client-static\"",
+    "start": "node server.js"
   },
   "author": "Harsh Rathod <hrathore50@ymail.com>",
   "dependencies": {
@@ -21,5 +22,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
+  },
+  "engines": {
+    "node": "16^"
   }
 }

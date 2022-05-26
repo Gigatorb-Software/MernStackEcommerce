@@ -23,6 +23,8 @@ app.use(express.static("client/build"));
 // Routes:
 app.use("/posts", postRoutes);
 
+app.set("port", process.env.PORT || 5000);
+
 const CONNECTION_URL = process.env.DB || "mongodb://localhost:27017/memories";
 const PORT = process.env.PORT|| 5000;
 
@@ -40,3 +42,5 @@ mongoose.set("useFindAndModify", false);
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
+
+export default app;
