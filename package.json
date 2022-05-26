@@ -8,7 +8,7 @@
     "client": "cd client && npm install && npm run start",
     "client-static": "cd client && npm install && npm run build",
     "dev": "npm install && concurrently \"nodemon server.js\" \"npm run client\"",
-    "start": "npm install && concurrently \"node server.js\" \"npm run client-static\""
+    "start": "node node_modules/concurrently/dist/bin/concurrently \"node server.js\" \"npm run client-static\""
   },
   "author": "Harsh Rathod <hrathore50@ymail.com>",
   "dependencies": {
