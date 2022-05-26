@@ -2,13 +2,13 @@
   "name": "childwelfare-sample-app-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "client": "cd client && npm install && npm start",
+    "client": "cd client && npm install && npm run start",
     "client-static": "cd client && npm install && npm run build",
-    "dev": "concurrently \"nodemon index.js\" \"npm run client\"",
-    "start": "concurrently \"node index.js\" \"npm run client-static\""
+    "dev": "npm install && concurrently \"nodemon server.js\" \"npm run client\"",
+    "start": "npm install && concurrently \"node server.js\" \"npm run client-static\""
   },
   "author": "Harsh Rathod <hrathore50@ymail.com>",
   "dependencies": {
