@@ -1,10 +1,10 @@
-import bodyParser from "body-parser";
-import cors from "cors";
-import dotenv from "dotenv";
-import express from "express";
-import mongoose from "mongoose";
-import path from "path";
-import postRoutes from "./routes/posts.js";
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const express = require("express");
+const mongoose = require("mongoose");
+const path = require("path");
+const postRoutes = require("./routes/posts.js");
 
 // Load all environment variables:
 dotenv.config();
@@ -45,5 +45,3 @@ mongoose.set("useFindAndModify", false);
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
-
-export default app;
