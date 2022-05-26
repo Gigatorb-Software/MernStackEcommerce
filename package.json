@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "client": "cd client && npm install && npm run start",
     "client-static": "cd client && npm install && npm run build",
@@ -24,6 +23,7 @@
     "nodemon": "^2.0.16"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=16.13.0",
+    "npm": ">=8.1.0"
   }
 }
