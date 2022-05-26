@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://sample-mern-stack.azurewebsites.net/posts';
+const url = 'https://sample-mern-stack.azurewebsites.net/posts';
 
 export const fetchPosts = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
